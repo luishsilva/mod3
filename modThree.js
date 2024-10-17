@@ -23,13 +23,11 @@
  */
 
 const modThree = (string) => {
-    let stringLength = string.length;
     let result = 0;
     for (const char of string) {
-        result += Number(char) * Math.pow(2, --stringLength);
-        console.log(result)
+        result = (result * 2 + Number(char)) % 3;
     }
-    return result % 3;
+    return result;
 }
 
 console.log(modThree('1101')); //1
