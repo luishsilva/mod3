@@ -3,7 +3,7 @@
  * Output: the remainder number represented by the binary string
  * 
  * In binary each digit represents a power of 2
- * so 1 in binary is = 1 x 2 power of 0 = 1
+ * so the binary 1 in decimal is = 1 * (2 power of 0) = 1
  * 
  *   Math.pow(2, 3) = 8 
  * 
@@ -22,5 +22,19 @@
  *  '' return should be 0
  */
 
+const modThree = (string) => {
+    let stringLength = string.length;
+    let result = 0;
+    for (const char of string) {
+        result += Number(char) * Math.pow(2, --stringLength);
+        console.log(result)
+    }
+    return result % 3;
+}
 
+console.log(modThree('1101')); //1
+console.log(modThree('1110')); // 2
+console.log(modThree('1111')); // 0
+console.log(modThree('1')); // 1
+console.log(modThree('')); // 0
 
