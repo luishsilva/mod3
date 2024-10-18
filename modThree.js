@@ -23,16 +23,17 @@
  */
 
 const modThree = (string) => {
+    if (typeof string !== 'string') return 'Input is not a binary string';
+
+    const isStringBinary = /^[01]*$/;
+    if (!isStringBinary.test(string)) return NaN;
+
     let result = 0;
     for (const char of string) {
         result = (result * 2 + Number(char)) % 3;
     }
     return result;
 }
-
-console.log(modThree('1101')); //1
-console.log(modThree('1110')); // 2
-console.log(modThree('1111')); // 0
-console.log(modThree('1')); // 1
-console.log(modThree('')); // 0
+console.log(modThree(1)) // 1
+module.exports = modThree;
 

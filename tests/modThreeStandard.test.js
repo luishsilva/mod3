@@ -1,6 +1,6 @@
-const modThree = require('../modThreeAdvanced');
+const modThree = require('../modThreeStandard');
 
-describe('modThree FSM Tests', () => {
+describe.only('modThree FSM Tests', () => {
     test('empty input string should return 0', () => {
         expect(modThree('')).toBe(0);
     });

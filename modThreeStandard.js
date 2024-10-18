@@ -29,9 +29,9 @@
  * Result should be S0 = 0
  */
 
-const modThree = (string) => {
+const modThreeStandard = (string) => {
 
-    if (typeof string !== 'string') return 'Input is not a string'
+    if (typeof string !== 'string') return 'Input is not a string';
 
     const isStringBinary = /^[01]*$/;
     if (!isStringBinary.test(string)) return NaN;
@@ -64,4 +64,4 @@ const modThree = (string) => {
     return finalState[currentState] % 3;
 }
 
-module.exports = modThree;
+module.exports = modThreeStandard;
