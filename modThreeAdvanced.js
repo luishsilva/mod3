@@ -58,11 +58,4 @@ const modThree = (string) => {
     return finalState[currentState] % 3;
 }
 
-console.log(modThree('110')); // 0
-console.log(modThree('1010')); // 1
-console.log(modThree('101')); // 2
-/* console.log(modThree('001')); // 1
-console.log(modThree('0010')); // 2
-console.log(modThree('1111')); // 0
-console.log(modThree('0000')); // 0
-console.log(modThree('1000')); // 2 */
+module.exports = modThree;
