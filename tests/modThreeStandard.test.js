@@ -62,6 +62,6 @@ describe.only('modThree FSM Tests', () => {
     });
 
     test('input numeric 1 is not valid', () => {
-        expect(modThree(1)).toBe('Input is not a string');
+        expect(modThree(1)).toBe('Input is not a binary string');
     })
 });

@@ -14,7 +14,7 @@
  * Final States (for some FSMs): States that represent a conclusion or halting 
  * condition for the system. (module three)
  * 
- * Input = 110
+ * Input = String of binary ex.: "110"
  * Output = 0
  *
  *  Table
