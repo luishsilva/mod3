@@ -45,7 +45,6 @@ const modThreeStandard = (string) => {
     let currentState = 'S0';
     
     for (const input of string) {
-        if (input > 1) return NaN;
         if (input === '0' && currentState === 'S0') {
             currentState = 'S0';
         } else if (input === '1' && currentState === 'S0') {
