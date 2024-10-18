@@ -31,6 +31,11 @@
 
 const modThree = (string) => {
 
+    if (typeof string !== 'string') return 'Input is not a string'
+
+    const isStringBinary = /^[01]*$/;
+    if (!isStringBinary.test(string)) return NaN;
+
     finalState = {
         S0: 0,
         S1: 1,
@@ -40,6 +45,7 @@ const modThree = (string) => {
     let currentState = 'S0';
     
     for (const input of string) {
+        if (input > 1) return NaN;
         if (input === '0' && currentState === 'S0') {
             currentState = 'S0';
         } else if (input === '1' && currentState === 'S0') {
